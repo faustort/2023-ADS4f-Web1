@@ -1,9 +1,11 @@
 body {
   font-family: sans-serif;
 }
-.container, main, footer {
-    max-width: 768px; /* defino uma largura máxima */
-    margin: 0 auto; /* centralizo elementos block */
+.container,
+main,
+footer {
+  max-width: 768px; /* defino uma largura máxima */
+  margin: 0 auto; /* centralizo elementos block */
 }
 .menu {
   display: flex;
@@ -14,7 +16,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .logotipo img {
   max-width: 100px;
   height: auto;
