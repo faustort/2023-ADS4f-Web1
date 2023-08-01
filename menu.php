@@ -1,6 +1,8 @@
     <header class="cabecalho"> <!-- Meu cabeçalho -->
         <!-- F1 -->
-        <div class="logotipo">Logotipo</div>
+        <div class="logotipo">
+            <a href="index.php"><img src="assets/images/logo.webp"></a>
+        </div>
 
         <!-- F2 -->
         <nav> <!-- Começo do Menu -->
