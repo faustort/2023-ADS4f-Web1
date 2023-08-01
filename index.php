@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title></title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-</head>
-<body>
 <?php
-include __DIR__ . '/menu.php';
+include __DIR__ . '/header.php';
 ?>
-
     <!-- Conteúdo principal do site -->
     <main>
         <h1>Bem vindos ao Meu Site Feliz</h1>
@@ -19,5 +10,3 @@ include __DIR__ . '/menu.php';
 <?php
 include __DIR__ . '/footer.php';
 ?>
-</body>
-</html>
