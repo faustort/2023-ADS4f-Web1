@@ -1,6 +1,10 @@
 body {
   font-family: sans-serif;
 }
+.container, main, footer {
+    max-width: 768px;
+    margin: 0 auto;
+}
 .menu {
   display: flex;
   justify-content: space-between;

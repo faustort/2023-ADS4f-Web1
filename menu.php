@@ -1,4 +1,4 @@
-    <header class="cabecalho"> <!-- Meu cabeçalho -->
+    <header class="cabecalho container"> <!-- Meu cabeçalho -->
         <!-- F1 -->
         <div class="logotipo">
             <a href="index.php"><img src="assets/images/logo.webp"></a>
