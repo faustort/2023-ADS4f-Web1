@@ -1,4 +1,6 @@
 <?php
+$titulo = "Home";
+
 include __DIR__ . '/header.php';
 ?>
     <!-- Conteúdo principal do site -->
