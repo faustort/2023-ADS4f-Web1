@@ -1,7 +1,10 @@
+
 body {
     font-family: sans-serif;
 }
 .menu{
     display: flex;
     justify-content: space-between;
+    list-style: none;
+    padding: 0;
 }
