@@ -2,8 +2,8 @@ body {
   font-family: sans-serif;
 }
 .container, main, footer {
-    max-width: 768px;
-    margin: 0 auto;
+    max-width: 768px; /* defino uma largura máxima */
+    margin: 0 auto; /* centralizo elementos block */
 }
 .menu {
   display: flex;
