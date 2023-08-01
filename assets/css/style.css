@@ -15,3 +15,14 @@ body {
     max-width: 100px;
     height: auto;
 }
+.menu a{
+    display: block;
+    padding: 10px 15px;
+    background-color: #ffe5d1;
+    border-radius: 10px;
+    transition: all 500ms;
+    text-decoration: none;
+}
+.menu a:hover{ /* classe seletora e passar o mouse sobre */
+    background-color: #ffffff;
+}
