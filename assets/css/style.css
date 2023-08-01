@@ -10,3 +10,8 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.logotipo img{
+    max-width: 100px;
+    height: auto;
+}
