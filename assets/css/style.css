@@ -8,3 +8,7 @@ body {
     list-style: none;
     padding: 0;
 }
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+}
