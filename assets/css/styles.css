@@ -1,25 +1,31 @@
+@charset "UTF-8";
 body {
   font-family: sans-serif;
 }
+
 .container,
 main,
 footer {
   max-width: 768px; /* defino uma largura máxima */
   margin: 0 auto; /* centralizo elementos block */
 }
+
 .menu {
   display: flex;
   justify-content: space-between;
 }
+
 .cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .logotipo img {
   max-width: 100px;
   height: auto;
 }
+
 .menu a {
   font-weight: bold;
   display: block;
@@ -30,6 +36,17 @@ footer {
   text-decoration: none;
 }
 .menu a:hover {
-  /* classe seletora e passar o mouse sobre */
   background-color: #ffffff;
 }
+.menu li.amarelo {
+  background-color: yellow;
+}
+
+a.efeito-zoom img {
+  transition: all 1s ease-in-out;
+}
+a.efeito-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=styles.css.map */

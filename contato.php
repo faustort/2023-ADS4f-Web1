@@ -7,6 +7,11 @@ include __DIR__ . '/header.php';
 <main>
     <h1>Fale comigo</h1>
     <p>Preencha o formulário</p>
+    <div>
+        <a href="#" class="efeito-zoom">
+            <img src="assets/images/logo.webp" alt="">
+        </a>
+    </div>
 </main>
 
 

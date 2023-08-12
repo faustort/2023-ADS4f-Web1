@@ -13,9 +13,10 @@ if (isset($titulo)) {
     <title><?php echo $titulo;  ?></title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="dist/bundle.js" ></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
+
 <body>
     <?php
     include __DIR__ . '/menu.php';
