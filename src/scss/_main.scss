@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+
+.container,
+main,
+footer {
+  max-width: $larguraContainer; /* defino uma largura máxima */
+  margin: 0 auto; /* centralizo elementos block */
+}

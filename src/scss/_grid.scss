@@ -1,0 +1,14 @@
+
+
+.grid-container{//abre aqui
+    max-width: $larguraContainer;
+    margin: 0 auto; // centralizar o bloco
+    display: flex;
+    flex-wrap: wrap; // quebrar os elementos que foram maior ou que excedem o container
+    justify-content: space-between;
+
+    .col {
+        flex: 1;
+    }
+
+}// fecha aqui

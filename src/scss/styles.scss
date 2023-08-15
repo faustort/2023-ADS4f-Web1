@@ -1,23 +1,6 @@
-body {
-  font-family: sans-serif;
-}
-.container,
-main,
-footer {
-  max-width: 768px; /* defino uma largura máxima */
-  margin: 0 auto; /* centralizo elementos block */
-}
+@import "vars"; // variáveis que todos vão usar
 
-a.efeito-zoom {
-  img {
-    // estado inicial
-    transition: all 1s ease-in-out;
-  }
-
-  &:hover {
-    img {
-      // estado quando A possui Hover
-      transform: scale(1.1);
-    }
-  }
-}
+@import "header";
+@import "main";
+@import "pages";
+@import "grid";
