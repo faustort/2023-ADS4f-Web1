@@ -27,4 +27,10 @@
   .col-6 {
     width: calc(100% / 2);
   }
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: calc(100% / #{12 / $i});
+    }
+  }
 } // fecha aqui
