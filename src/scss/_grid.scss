@@ -9,11 +9,22 @@
   .col {
     flex: 1;
   }
-
-  // create a for loop to generate the classes
-  @for $i from 1 through 12 {
-    .col-#{$i} {
-      width: calc(100% / #{$i});
-    }
+  .col-1 {
+    width: calc(100% / 12);
+  }
+  .col-2 {
+    width: calc(100% / 6);
+  }
+  .col-3 {
+    width: calc(100% / 4);
+  }
+  .col-4 {
+    width: calc(100% / 3);
+  }
+  .col-5 {
+    width: calc(100% / 2.4);
+  }
+  .col-6 {
+    width: calc(100% / 2);
   }
 } // fecha aqui
