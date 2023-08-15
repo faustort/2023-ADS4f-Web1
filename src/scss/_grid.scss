@@ -1,14 +1,19 @@
+.grid-container {
+  //abre aqui
+  max-width: $larguraContainer;
+  margin: 0 auto; // centralizar o bloco
+  display: flex;
+  flex-wrap: wrap; // quebrar os elementos que foram maior ou que excedem o container
+  justify-content: space-between;
 
+  .col {
+    flex: 1;
+  }
 
-.grid-container{//abre aqui
-    max-width: $larguraContainer;
-    margin: 0 auto; // centralizar o bloco
-    display: flex;
-    flex-wrap: wrap; // quebrar os elementos que foram maior ou que excedem o container
-    justify-content: space-between;
-
-    .col {
-        flex: 1;
+  // create a for loop to generate the classes
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: calc(100% / #{$i});
     }
-
-}// fecha aqui
+  }
+} // fecha aqui

@@ -1,4 +1,18 @@
 @charset "UTF-8";
+.grid-container {
+  max-width: "1400px";
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-container .col {
+  flex: 1;
+}
+.grid-container .col-4 {
+  width: 33.3333333333%;
+}
+
 .cabecalho {
   display: flex;
   justify-content: space-between;
@@ -46,17 +60,6 @@ a.efeito-zoom img {
 }
 a.efeito-zoom:hover img {
   transform: scale(1.1);
-}
-
-.grid-container {
-  max-width: "1400px";
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.grid-container .col {
-  flex: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

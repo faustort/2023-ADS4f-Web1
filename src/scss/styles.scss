@@ -1,6 +1,8 @@
 @import "vars"; // variáveis que todos vão usar
+@import "grid"; // sistema de grid 
 
+
+// trabalhar o estilo específico do site
 @import "header";
 @import "main";
 @import "pages";
-@import "grid";
