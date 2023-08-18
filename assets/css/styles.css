@@ -10,25 +10,9 @@
   flex: 1;
 }
 .grid-container .col-1 {
-  width: 8.3333333333%;
-}
-.grid-container .col-2 {
-  width: 16.6666666667%;
-}
-.grid-container .col-3 {
-  width: 25%;
-}
-.grid-container .col-4 {
-  width: 33.3333333333%;
-}
-.grid-container .col-5 {
-  width: 41.6666666667%;
-}
-.grid-container .col-6 {
-  width: 50%;
-}
-.grid-container .col-1 {
   width: calc(100% / 12);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-1 {
@@ -37,6 +21,8 @@
 }
 .grid-container .col-2 {
   width: calc(100% / 6);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-2 {
@@ -45,6 +31,8 @@
 }
 .grid-container .col-3 {
   width: calc(100% / 4);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-3 {
@@ -53,6 +41,8 @@
 }
 .grid-container .col-4 {
   width: calc(100% / 3);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-4 {
@@ -61,6 +51,8 @@
 }
 .grid-container .col-5 {
   width: calc(100% / 2.4);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-5 {
@@ -69,6 +61,8 @@
 }
 .grid-container .col-6 {
   width: calc(100% / 2);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-6 {
@@ -77,6 +71,8 @@
 }
 .grid-container .col-7 {
   width: calc(100% / 1.7142857143);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-7 {
@@ -85,6 +81,8 @@
 }
 .grid-container .col-8 {
   width: calc(100% / 1.5);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-8 {
@@ -93,6 +91,8 @@
 }
 .grid-container .col-9 {
   width: calc(100% / 1.3333333333);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-9 {
@@ -101,6 +101,8 @@
 }
 .grid-container .col-10 {
   width: calc(100% / 1.2);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-10 {
@@ -109,6 +111,8 @@
 }
 .grid-container .col-11 {
   width: calc(100% / 1.0909090909);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-11 {
@@ -117,6 +121,8 @@
 }
 .grid-container .col-12 {
   width: calc(100% / 1);
+  border: 5px dashed red;
+  box-sizing: border-box;
 }
 @media (max-width: 999px) {
   .grid-container .col-12 {
