@@ -1,4 +1,9 @@
-$corBase: "#554DE3";
-$corSecundaria: "#5584FB";
+$corBase: #554de3;
+$corSecundaria: #5584fb;
+$corTerciaria: #f19000;
 
-$larguraContainer: "1400px";
+$larguraContainer: 1400px;
+
+.cor-terciaria {
+  color: $corTerciaria;
+}

@@ -1,4 +1,5 @@
-    <header class="grid-container"> <!-- Meu cabeçalho -->
+<div class="fundo-gradiente">
+    <header class="container cabecalho"> <!-- Meu cabeçalho -->
         <div class="col-3">
             <!-- F1 -->
             <div class="logotipo">
@@ -23,3 +24,4 @@
             <div class="redes">Redes Sociais</div>
         </div>
     </header>
+</div>

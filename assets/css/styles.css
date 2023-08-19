@@ -1,6 +1,10 @@
 @charset "UTF-8";
+.cor-terciaria {
+  color: #f19000;
+}
+
 .grid-container {
-  max-width: "1400px";
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +15,7 @@
 }
 .grid-container .col-1 {
   width: calc(100% / 12);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -21,7 +25,7 @@
 }
 .grid-container .col-2 {
   width: calc(100% / 6);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -31,7 +35,7 @@
 }
 .grid-container .col-3 {
   width: calc(100% / 4);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -41,7 +45,7 @@
 }
 .grid-container .col-4 {
   width: calc(100% / 3);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -51,7 +55,7 @@
 }
 .grid-container .col-5 {
   width: calc(100% / 2.4);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -61,7 +65,7 @@
 }
 .grid-container .col-6 {
   width: calc(100% / 2);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -71,7 +75,7 @@
 }
 .grid-container .col-7 {
   width: calc(100% / 1.7142857143);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -81,7 +85,7 @@
 }
 .grid-container .col-8 {
   width: calc(100% / 1.5);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -91,7 +95,7 @@
 }
 .grid-container .col-9 {
   width: calc(100% / 1.3333333333);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -101,7 +105,7 @@
 }
 .grid-container .col-10 {
   width: calc(100% / 1.2);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -111,7 +115,7 @@
 }
 .grid-container .col-11 {
   width: calc(100% / 1.0909090909);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -121,7 +125,7 @@
 }
 .grid-container .col-12 {
   width: calc(100% / 1);
-  border: 5px dashed red;
+  border: 1px dashed seashell;
   box-sizing: border-box;
 }
 @media (max-width: 999px) {
@@ -130,22 +134,27 @@
   }
 }
 
+.fundo-gradiente {
+  background: linear-gradient(to right, #d88936 10%, #114fb7);
+  min-height: 96px;
+  display: flex;
+}
+
 .cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /*corrige a largura do elemento por ser filho de um flex*/
 }
-
-.logotipo img {
+.cabecalho .logotipo img {
   max-width: 100px;
   height: auto;
 }
-
-.menu {
+.cabecalho .menu {
   display: flex;
   justify-content: space-between;
 }
-.menu a {
+.cabecalho .menu a {
   font-weight: bold;
   display: block;
   padding: 10px 15px;
@@ -154,10 +163,10 @@
   transition: all 500ms;
   text-decoration: none;
 }
-.menu a:hover {
-  background-color: "#5584FB";
+.cabecalho .menu a:hover {
+  background-color: #5584fb;
 }
-.menu li.amarelo {
+.cabecalho .menu li.amarelo {
   background-color: yellow;
 }
 
@@ -165,10 +174,8 @@ body {
   font-family: sans-serif;
 }
 
-.container,
-main,
-footer {
-  max-width: "1400px"; /* defino uma largura máxima */
+.container {
+  max-width: 1400px; /* defino uma largura máxima */
   margin: 0 auto; /* centralizo elementos block */
 }
 
@@ -177,6 +184,11 @@ a.efeito-zoom img {
 }
 a.efeito-zoom:hover img {
   transform: scale(1.1);
+}
+
+footer {
+  background-color: #1453bd;
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

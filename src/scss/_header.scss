@@ -1,31 +1,38 @@
+.fundo-gradiente {
+  background: linear-gradient(to right, #d88936 10%, #114fb7);
+  min-height: 96px;
+  display: flex;
+}
+
 .cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.logotipo img {
-  max-width: 100px;
-  height: auto;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  a {
-    font-weight: bold;
-    display: block;
-    padding: 10px 15px;
-    background-color: #ffe5d1;
-    border-radius: 10px;
-    transition: all 500ms;
-    text-decoration: none;
-    &:hover {
-      background-color: $corSecundaria;
-    }
+  width: 100%; /*corrige a largura do elemento por ser filho de um flex*/
+  .logotipo img {
+    max-width: 100px;
+    height: auto;
   }
-  li {
-    &.amarelo {
-      background-color: yellow;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-weight: bold;
+      display: block;
+      padding: 10px 15px;
+      background-color: #ffe5d1;
+      border-radius: 10px;
+      transition: all 500ms;
+      text-decoration: none;
+      &:hover {
+        background-color: $corSecundaria;
+      }
+    }
+    li {
+      &.amarelo {
+        background-color: yellow;
+      }
     }
   }
 }
