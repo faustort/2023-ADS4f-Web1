@@ -32,5 +32,5 @@ include_once __DIR__ . "/config/connection.php";
 
 
 <?php
-include "footer.php";
+include __DIR__ . "/footer.php";
 ?>
