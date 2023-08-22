@@ -1,4 +1,16 @@
 <?php
+/*
+ CREATE TABLE IF NOT EXISTS  `noticias` (
+  `idNot` int NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `descricao` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `noticias` (`idNot`, `titulo`, `descricao`) VALUES
+(1, 'Notícia Teste', 'Descrição da notícia');
+ 
+*/
+
 
 $host = 'localhost';
 $username = 'senac';
@@ -14,6 +26,6 @@ $sql = "SELECT * FROM noticias";
 // executando o sql dentro do banco baseado nas informações de conexão
 $resultado = $pdo->query($sql);
 
-if($resultado){
+if ($resultado) {
     echo 'Conexão realizada com sucesso!';
 }
