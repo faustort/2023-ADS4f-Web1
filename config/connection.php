@@ -13,3 +13,7 @@ $sql = "SELECT * FROM noticias";
 
 // executando o sql dentro do banco baseado nas informações de conexão
 $resultado = $pdo->query($sql);
+
+if($resultado){
+    echo 'Conexão realizada com sucesso!';
+}
