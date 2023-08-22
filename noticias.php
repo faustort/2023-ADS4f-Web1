@@ -15,7 +15,7 @@ include_once __DIR__ . "/config/connection.php";
                 while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
                     echo '<div class="col-md-4">';
                     echo '<div class="card">';
-                    echo '<img class="card-img-top" src="//picsum.photos/500/200" alt="Imagem de capa do card">';
+                    echo '<img class="card-img-top" src="//picsum.photos/500/200/?' . rand() . '" alt="Imagem de capa do card">';
                     echo '<div class="card-body">';
                     echo '    <h5 class="card-title">' . $linha['titulo'] . '</h5>';
                     echo '    <p class="card-text">' . $linha['descricao'] . '</p>';
@@ -23,8 +23,6 @@ include_once __DIR__ . "/config/connection.php";
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
-
-                    
                 }
             }
             ?>
