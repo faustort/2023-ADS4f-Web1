@@ -24,9 +24,9 @@ INSERT INTO `noticias` (`idNot`, `titulo`, `descricao`) VALUES
 
 
 $host = 'localhost';
-$username = 'senac';
-$password = 'senac';
-$database = 'aula';
+$username = 'root';
+$password = '';
+$database = 'test';
 
 // crio a conexação com o banco de dados 
 $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);

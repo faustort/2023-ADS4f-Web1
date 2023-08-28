@@ -153,6 +153,7 @@
 .cabecalho .menu {
   display: flex;
   justify-content: space-between;
+  list-style: none;
 }
 .cabecalho .menu a {
   font-weight: bold;
@@ -184,6 +185,7 @@ a.efeito-zoom img {
 }
 a.efeito-zoom:hover img {
   transform: scale(1.1);
+  opacity: 0;
 }
 
 footer {

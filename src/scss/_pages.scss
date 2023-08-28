@@ -8,6 +8,7 @@ a.efeito-zoom {
     img {
       // estado quando A possui Hover
       transform: scale(1.1);
+      opacity: 0;
     }
   }
 }

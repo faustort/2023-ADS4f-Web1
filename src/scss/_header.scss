@@ -13,10 +13,10 @@
     max-width: 100px;
     height: auto;
   }
-
   .menu {
     display: flex;
     justify-content: space-between;
+    list-style: none;
     a {
       font-weight: bold;
       display: block;
