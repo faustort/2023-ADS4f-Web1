@@ -4,7 +4,7 @@ include __DIR__ . '/header.php';
 ?>
 
 <!-- Conteúdo principal do site -->
-<main>
+<main> 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
