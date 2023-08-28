@@ -1,6 +1,7 @@
 <?php
 $titulo = "Página de contato";
 include __DIR__ . '/header.php';
+include_once __DIR__ . '/config/connection.php'; // once: se eu já inclui em algum lugar não dará erro
 ?>
 
 <!-- Conteúdo principal do site -->
@@ -10,7 +11,6 @@ include __DIR__ . '/header.php';
             <div class="col-md-6">
                 <h1>Fale comigo</h1>
                 <p>Preencha o formulário</p>
-
                 <form action="" method="get" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="nome_input" class="form-label">Digite seu Nome</label>
@@ -29,9 +29,24 @@ include __DIR__ . '/header.php';
             </div>
             <div class="col-md-6">
                 <?php
-                echo isset($_GET['nome']) ? $_GET['nome'] : 'Nome não informado<br>';
-                echo isset($_GET['email']) ? $_GET['email'] : 'Email não informado<br>';
-                echo isset($_GET['mensagem']) ? $_GET['mensagem'] : 'Mensagem não informada';
+                echo isset($_GET['nome']) ? 'Seu nome: ' . $_GET['nome'] . '<br>' : 'Nome não informado<br>';
+                echo isset($_GET['email']) ? 'Seu e-mail: ' . $_GET['email'] . '<br>' : 'Email não informado<br>';
+                echo isset($_GET['mensagem']) ? 'Sua mensagem:' . $_GET['mensagem'] : 'Mensagem não informada';
+
+                if(isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['mensagem'])){
+                    $nome = $_GET['nome'];
+                    $email = $_GET['email'];
+                    $mensagem = $_GET['mensagem'];
+                    
+                    $pdo->query("INSERT INTO contato (nome, email, mensagem) VALUES ('$nome', '$email', '$mensagem')");
+                    if($pdo){
+                        echo '<div class="alert alert-success" role="alert">Mensagem enviada com sucesso!</div>';
+                    } else {
+                        echo '<div class="alert alert-danger" role="alert">Erro ao enviar mensagem!</div>';
+                    }
+
+                }
+
                 ?>
             </div>
         </div>
