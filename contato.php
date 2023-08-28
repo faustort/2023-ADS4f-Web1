@@ -40,9 +40,9 @@ include_once __DIR__ . '/config/connection.php'; // once: se eu já inclui em al
                     
                     $pdo->query("INSERT INTO contato (nome, email, mensagem) VALUES ('$nome', '$email', '$mensagem')");
                     if($pdo){
-                        echo '<div class="alert alert-success" role="alert">Mensagem enviada com sucesso!</div>';
+                        echo '<div class="alert alert-success">Mensagem enviada com sucesso!</div>';
                     } else {
-                        echo '<div class="alert alert-danger" role="alert">Erro ao enviar mensagem!</div>';
+                        echo '<div class="alert alert-danger">Erro ao enviar mensagem!</div>';
                     }
 
                 }
