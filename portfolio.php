@@ -5,7 +5,7 @@ include_once __DIR__ . '/config/connection.php'; // once: se eu já inclui em al
 
 
 if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imagem'])) {
-    $diretorio = __DIR__ . '/assets/images/'; // para onde ela vai
+    $diretorio = __DIR__ . '/' . $image_folder; // para onde ela vai
     $nomeArquivo = $_FILES['imagem']['name']; // nome do arquivo
     $arquivo = $diretorio . $nomeArquivo; // caminho completo do arquivo
 
@@ -29,23 +29,23 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
             <div class="col-md-6">
                 <h1>Sobre a minha pessoa</h1>
                 <p>Veja meu currículo</p>
-<?php
-    
-    $resultado = $pdo->query("SELECT * FROM portfolio");
-    if($resultado){
-        while($linha = $resultado->fetch(PDO::FETCH_ASSOC)){
-            echo '<div class="card">';
-            echo '<img class="card-img-top" src="assets/images/' . $linha['imagem'] . '" alt="Imagem de capa do card">';
-            echo '<div class="card-body">';
-            echo '    <h5 class="card-title">' . $linha['titulo'] . '</h5>';
-            echo '    <p class="card-text">' . $linha['descricao'] . '</p>';
-            echo '   <a href="#" class="btn btn-primary">Visitar</a>';
-            echo '</div>';
-            echo '</div>';
-        }
-    }
+                <?php
 
-?>
+                $resultado = $pdo->query("SELECT * FROM portfolio");
+                if ($resultado) {
+                    while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                        echo '<div class="card">';
+                        echo '<img class="card-img-top" src="' . $image_folder . $linha['imagem'] . '" alt="Imagem de capa do card">';
+                        echo '<div class="card-body">';
+                        echo '    <h5 class="card-title">' . $linha['titulo'] . '</h5>';
+                        echo '    <p class="card-text">' . $linha['descricao'] . '</p>';
+                        echo '   <a href="#" class="btn btn-primary">Visitar</a>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                }
+
+                ?>
             </div>
             <div class="col-md-6">
                 <form action="" method="post" enctype="multipart/form-data">

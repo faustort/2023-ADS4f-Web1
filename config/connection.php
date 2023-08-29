@@ -28,6 +28,8 @@ $username = 'root';
 $password = '';
 $database = 'test';
 
+$image_folder = 'assets/images/';
+
 // crio a conexação com o banco de dados 
 $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
 
