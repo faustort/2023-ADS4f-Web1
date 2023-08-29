@@ -6,7 +6,9 @@ include_once __DIR__ . '/config/connection.php'; // once: se eu já inclui em al
 
 if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imagem'])) {
     $diretorio = __DIR__ . '/' . $image_folder; // para onde ela vai
-    $nomeArquivo = $_FILES['imagem']['name']; // nome do arquivo
+
+    // create an unique file name
+    $nomeArquivo = uniqid() . '-' . $_FILES['imagem']['name']; // nome do arquivo
     $arquivo = $diretorio . $nomeArquivo; // caminho completo do arquivo
 
     if (move_uploaded_file($_FILES['imagem']['tmp_name'], $arquivo)) {
@@ -29,23 +31,31 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
             <div class="col-md-6">
                 <h1>Sobre a minha pessoa</h1>
                 <p>Veja meu currículo</p>
-                <?php
+                <div class="row">
+                    <?php
 
-                $resultado = $pdo->query("SELECT * FROM portfolio");
-                if ($resultado) {
-                    while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
-                        echo '<div class="card">';
-                        echo '<img class="card-img-top" src="' . $image_folder . $linha['imagem'] . '" alt="Imagem de capa do card">';
-                        echo '<div class="card-body">';
-                        echo '    <h5 class="card-title">' . $linha['titulo'] . '</h5>';
-                        echo '    <p class="card-text">' . $linha['descricao'] . '</p>';
-                        echo '   <a href="#" class="btn btn-primary">Visitar</a>';
-                        echo '</div>';
-                        echo '</div>';
+                    $resultado = $pdo->query("SELECT * FROM portfolio");
+                    if ($resultado) {
+                        while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                    ?>
+
+                            <div class="col-md-2">
+                                <div class="card mr-2 mb-4">
+                                    <img class="card-img-top" src="<?php echo $image_folder . $linha['imagem']; ?>" alt="Imagem de capa do card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo  $linha['titulo'] ?></h5>
+                                        <p class="card-text"><?php echo $linha['descricao']; ?></p>
+                                        <a href="#" class="btn btn-primary">Visitar</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                    <?php
+                        }
                     }
-                }
 
-                ?>
+                    ?>
+                </div>
             </div>
             <div class="col-md-6">
                 <form action="" method="post" enctype="multipart/form-data">
