@@ -5,9 +5,15 @@ include_once __DIR__ . '/config/connection.php'; // once: se eu já inclui em al
 
 
 if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imagem'])) {
-    $diretorio = __DIR__ . '/' . $image_folder; // para onde ela vai
+    /*
+        A variável $image_folder vem do arquivo de configuração
+        connection.php, é util deixa-la externa para que 
+        futuras modificações no sistema de pastas possam ser 
+        facilmente alteradas.
+    */
+    $diretorio = __DIR__ . '/' . $image_folder; 
 
-    // create an unique file name
+    // Criar um nome único para o arquivo
     $nomeArquivo = uniqid() . '-' . $_FILES['imagem']['name']; // nome do arquivo
     $arquivo = $diretorio . $nomeArquivo; // caminho completo do arquivo
 
@@ -38,7 +44,7 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
                         while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
                     ?>
 
-                            <div class="col-md-2">
+                            <div class="col-md-6">
                                 <div class="card mr-2 mb-4">
                                     <img class="card-img-top" src="<?php echo $image_folder . $linha['imagem']; ?>" alt="Imagem de capa do card">
                                     <div class="card-body">
