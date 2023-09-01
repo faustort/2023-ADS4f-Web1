@@ -43,18 +43,18 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
                     if ($resultado) {
                         while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
                     ?>
-
                             <div class="col-md-6">
                                 <div class="card mr-2 mb-4">
                                     <img class="card-img-top" src="<?php echo $image_folder . $linha['imagem']; ?>" alt="Imagem de capa do card">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo  $linha['titulo'] ?></h5>
                                         <p class="card-text"><?php echo $linha['descricao']; ?></p>
-                                        <a href="#" class="btn btn-primary">Visitar</a>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-danger"><a href="?action=apagar&idPor=<?php echo $linha['idPor']; ?>"><i class="bi bi-trash"></i></a></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                     <?php
                         }
                     }
