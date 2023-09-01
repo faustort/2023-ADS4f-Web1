@@ -15,7 +15,6 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
         $titulo = $_POST['titulo'];
         $descricao = $_POST['descricao'];
         $pdo->query("INSERT INTO portfolio (titulo, descricao, imagem) VALUES ('$titulo', '$descricao', '$nomeArquivo')");
-
         echo 'Arquivo salvo com sucesso!';
     } else {
         echo 'Erro ao salvar o arquivo!';
