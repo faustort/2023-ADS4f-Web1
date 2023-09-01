@@ -5,7 +5,7 @@ $host = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'aulaweb';
-
+ 
 $image_folder = 'assets/images/';
 
 // crio a conexação com o banco de dados 
