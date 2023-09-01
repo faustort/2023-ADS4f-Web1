@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+
 $titulo = "Home";
 
 include __DIR__ . '/header.php';

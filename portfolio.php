@@ -90,7 +90,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
             <div class="col-md-6">
                 <h1>Enviar um portfólio</h1>
                 <p>Envie seu currículo</p>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="portfolio.php" method="post" enctype="multipart/form-data">
                     <div>
                         <label class="form-label" for="titulo">Título do Portfólio</label>
                         <input class="form-control" type="text" name="titulo" id="titulo">
