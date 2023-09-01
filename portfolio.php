@@ -28,6 +28,28 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
 }
 
 
+/**
+ * Verifica se a ação é apagar e se o id do portfólio foi enviado
+ */
+if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'])) {
+    // Pega a id do portfólio no banco
+    $idPor = $_GET['idPor'];
+    // prepara o select
+    $resultado = $pdo->query("SELECT * FROM portfolio WHERE idPor = $idPor");
+    // verifica se o select retornou algum resultado
+    if ($resultado) {
+        // pega a linha do resultado
+        $linha = $resultado->fetch(PDO::FETCH_ASSOC);
+        // pega o nome da imagem
+        $imagem = $linha['imagem'];
+        // apaga a imagem utilizando a função unlink
+        unlink(__DIR__ . '/' . $image_folder . $imagem);
+        // apaga o registro do banco
+        $pdo->query("DELETE FROM portfolio WHERE idPor = $idPor");
+    }
+}
+
+
 ?>
 <!-- Conteúdo principal do site -->
 <main class="my-5">
@@ -50,7 +72,7 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
                                         <h5 class="card-title"><?php echo  $linha['titulo'] ?></h5>
                                         <p class="card-text"><?php echo $linha['descricao']; ?></p>
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-danger"><a href="?action=apagar&idPor=<?php echo $linha['idPor']; ?>"><i class="bi bi-trash"></i></a></button>
+                                            <button type="button" class="btn btn-danger"><a href="?action=apagar&idPor=<?php echo $linha['idPor']; ?>" class="text-light"><i class="bi bi-trash"></i></a></button>
                                         </div>
                                     </div>
                                 </div>
