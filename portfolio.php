@@ -11,7 +11,7 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
         futuras modificações no sistema de pastas possam ser 
         facilmente alteradas.
     */
-    $diretorio = __DIR__ . '/' . $image_folder; 
+    $diretorio = __DIR__ . '/' . $image_folder;
 
     // Criar um nome único para o arquivo
     $nomeArquivo = uniqid() . '-' . $_FILES['imagem']['name']; // nome do arquivo
@@ -63,6 +63,8 @@ if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imag
                 </div>
             </div>
             <div class="col-md-6">
+                <h1>Enviar um portfólio</h1>
+                <p>Envie seu currículo</p>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div>
                         <label class="form-label" for="titulo">Título do Portfólio</label>
