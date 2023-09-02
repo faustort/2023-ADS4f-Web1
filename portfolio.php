@@ -75,7 +75,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
                                         <p class="card-text"><?php echo $linha['descricao']; ?></p>
                                         <div class="btn-group" role="group" aria-label="Basic example">
                                             <button type="button" class="btn btn-danger"><a href="?action=apagar&idPor=<?php echo $linha['idPor']; ?>" class="text-light"><i class="bi bi-trash"></i></a></button>
-                                            <button type="button" class="btn btn-primary"><a href="?action=editar&idPor=<?php echo $linha['idPor']; ?>" class="text-light"><i class="bi bi-pen"></i></a></button>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar"><a href="#" class="text-light"><i class="bi bi-pen"></i></a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -107,6 +107,19 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
                         <input class="btn btn-primary" type="submit" value="Enviar">
                     </div>
                 </form>
+
+
+                <div class="modal" id="modalEditar">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <h1>oi</h1>
+                        </div>
+                        <div class="modal-footer">
+                            <p>conteudo</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
