@@ -76,7 +76,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
                             <div class="col-md-6">
                                 <div class="card mr-2 mb-4">
                                     <img class="card-img-top" src="<?php echo $image_folder . $linha['imagem']; ?>" alt="Imagem de capa do card">
-                                    <div class="card-body">
+                                    <div class="card-body" id="portifolio-<?php echo $linha['idPor']?>">
                                         <h5 class="card-title"><?php echo  $linha['titulo'] ?></h5>
                                         <p class="card-text"><?php echo $linha['descricao']; ?></p>
                                         <div class="btn-group" role="group" aria-label="Basic example">
