@@ -111,14 +111,45 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
 
                 <div class="modal" id="modalEditar">
                     <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <h1>oi</h1>
+                        <div class="modal-content p-5">
+                            <h1>Editar</h1>
+                            <form action="portfolio.php" method="post" enctype="multipart/form-data">
+                                <div>
+                                    <label class="form-label" for="titulo">Título do Portfólio</label>
+                                    <input class="form-control" type="text" name="titulo" id="titulo">
+                                </div>
+                                <div>
+                                    <label class="form-label" for="descricao">Descrição</label>
+                                    <textarea class="form-control" name="descricao" rows="4"></textarea>
+                                </div>
+                                <div>
+                                    <label class="form-label" for="imagem">Selecione sua imagem</label>
+                                    <input class="form-control" type="file" name="imagem" id="imagem">
+                                </div>
+                                <div>
+                                    <input class="btn btn-primary" type="submit" value="Enviar">
+                                </div>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <p>conteudo</p>
                         </div>
                     </div>
                 </div>
+
+                <script>
+
+                    const modal = document.getElementById('modalEditar');
+                    if(modal){
+
+                        modal.addEventListener('show.bs.modal', function(event){
+                            console.log(event);                             
+                        })
+
+                    }
+
+                </script>
+
 
             </div>
         </div>
