@@ -4,7 +4,13 @@ include __DIR__ . '/header.php';
 include_once __DIR__ . '/config/connection.php'; // once: se eu já inclui em algum lugar não dará erro
 
 
-if (isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imagem'])) {
+
+if (isset($_GET['action']) == 'editar') {
+    echo 'ESTOU EDITANDO';
+}
+
+
+if (isset($_GET['action']) && $_GET['action'] == 'inserir'  &&  isset($_POST['titulo']) && isset($_POST['descricao']) && isset($_FILES['imagem'])) {
     /*
         A variável $image_folder vem do arquivo de configuração
         connection.php, é util deixa-la externa para que 
@@ -75,7 +81,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
                                         <p class="card-text"><?php echo $linha['descricao']; ?></p>
                                         <div class="btn-group" role="group" aria-label="Basic example">
                                             <button type="button" class="btn btn-danger"><a href="?action=apagar&idPor=<?php echo $linha['idPor']; ?>" class="text-light"><i class="bi bi-trash"></i></a></button>
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar"><a href="#" class="text-light"><i class="bi bi-pen"></i></a></button>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar" data-bs-idpor="<?php echo $linha['idPor']; ?>"><a href="#" class="text-light"><i class="bi bi-pen"></i></a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -90,7 +96,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
             <div class="col-md-6">
                 <h1>Enviar um portfólio</h1>
                 <p>Envie seu currículo</p>
-                <form action="portfolio.php" method="post" enctype="multipart/form-data">
+                <form action="portfolio.php?action=inserir" method="post" enctype="multipart/form-data">
                     <div>
                         <label class="form-label" for="titulo">Título do Portfólio</label>
                         <input class="form-control" type="text" name="titulo" id="titulo">
@@ -113,7 +119,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content p-5">
                             <h1>Editar</h1>
-                            <form action="portfolio.php" method="post" enctype="multipart/form-data">
+                            <form action="portfolio.php?actio" method="post" enctype="multipart/form-data">
                                 <div>
                                     <label class="form-label" for="titulo">Título do Portfólio</label>
                                     <input class="form-control" type="text" name="titulo" id="titulo">
@@ -136,21 +142,21 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
                         </div>
                     </div>
                 </div>
-
                 <script>
-
+                    // solicito ao javascript que ele me traga este elemento
                     const modal = document.getElementById('modalEditar');
-                    if(modal){
+                    if (modal) {
+                        // escutando um evento deste modal
+                        modal.addEventListener('show.bs.modal', function(event) {
+                            // Button that triggered the modal
+                            const button = event.relatedTarget;
+                            // Extract info from data-bs-* attributes   
+                            const idPor = button.getAttribute('data-bs-idpor');
 
-                        modal.addEventListener('show.bs.modal', function(event){
-                            console.log(event);                             
+
                         })
-
                     }
-
                 </script>
-
-
             </div>
         </div>
     </div>
