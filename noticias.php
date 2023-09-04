@@ -33,12 +33,11 @@ include_once __DIR__ . "/config/connection.php";
 </main>
 
 <script>
-
     const h5 = document.querySelectorAll('h5');
     console.log(h5);
     h5[0].innerText = "Troquei o titulo";
 
-    h5.forEach(function (index, element) {
+    h5.forEach(function(index, element) {
         console.log(element);
         console.log(index);
     })
@@ -49,7 +48,7 @@ include_once __DIR__ . "/config/connection.php";
 
     const links = document.querySelectorAll('.card a');
 
-    links.forEach(function (element, index) {
+    links.forEach(function(element, index) {
         console.log("Achei os as: ", element);
         element.href = "https://www.google.com.br";
     })
@@ -59,11 +58,12 @@ include_once __DIR__ . "/config/connection.php";
         cada h5 para "Título n" onde n é o número
     */
     const todos_h5 = document.querySelectorAll('h5');
-    todos_h5.forEach(function (element, index) {
+    todos_h5.forEach(function(element, index) {
         element.innerText = 'Título' + index;
     })
 
 
+    // objeto em javascript
     let pessoa = {
         nome: "Onofre Junior",
         profissão: "estudante",
@@ -71,7 +71,9 @@ include_once __DIR__ . "/config/connection.php";
         CPF: '123.456.789-00'
     }
     console.log("Nome:", pessoa['nome']);
+    console.log("Nome:", pessoa.nome);
 
+    // array em javascript
     let funcionario = [
         'Onofre Pai',
         'CEO',
@@ -81,6 +83,23 @@ include_once __DIR__ . "/config/connection.php";
     console.log(funcionario[0])
 
 
+    // esta variável precisa ser iniciada fora 
+    // pq vamos incrementa-la por meio de uma função
+    // e posteriormente poderemos trabalhar esta variavel
+    let listaPessoas = [];
+
+    function adicionarPessoa(nome, profissao) {
+        let pessoa = {
+            nome: nome,
+            profissao: profissao
+        }
+        listaPessoas.push(pessoa);
+    }
+
+    adicionarPessoa("Fausto", 'Professor');
+    adicionarPessoa("Juana", 'Camareira');
+    adicionarPessoa("João", 'Motociclista');
+    console.log(pessoa);
 </script>
 
 
