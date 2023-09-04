@@ -143,6 +143,23 @@ if (isset($_GET['action']) && $_GET['action'] == 'apagar' && isset($_GET['idPor'
                     </div>
                 </div>
                 <script>
+
+
+                    const botoes = document.querySelectorAll('<button></button>');
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
                     // solicito ao javascript que ele me traga este elemento
                     const modal = document.getElementById('modalEditar');
                     if (modal) {
