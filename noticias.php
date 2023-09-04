@@ -54,6 +54,32 @@ include_once __DIR__ . "/config/connection.php";
         element.href = "https://www.google.com.br";
     })
 
+    /*
+        Crie um código que troque o título de 
+        cada h5 para "Título n" onde n é o número
+    */
+    const todos_h5 = document.querySelectorAll('h5');
+    todos_h5.forEach(function (element, index) {
+        element.innerText = 'Título' + index;
+    })
+
+
+    let pessoa = {
+        nome: "Onofre Junior",
+        profissão: "estudante",
+        sexo: "Masculino",
+        CPF: '123.456.789-00'
+    }
+    console.log("Nome:", pessoa['nome']);
+
+    let funcionario = [
+        'Onofre Pai',
+        'CEO',
+        'sem genero',
+        '123456789-01'
+    ];
+    console.log(funcionario[0])
+
 
 </script>
 
