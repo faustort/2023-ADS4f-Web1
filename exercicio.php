@@ -24,10 +24,9 @@ include __DIR__ . '/header.php';
                 </form>
                 <table class="table" id="tabelaPessoas">
                     <tr>
-                        <th>Nome</th>
-                        <th>Profissão</th>
+                        <td>Nome</td>
+                        <td>Profissão</td>
                     </tr>
-
                 </table>
             </div>
         </div>
@@ -58,11 +57,23 @@ include __DIR__ . '/header.php';
         e.preventDefault(); // previne o comportamento padrão do botão
 
         cadastrarPessoa();
+        adicionarATabela();
     });
 
-    function adicionarATabela(){
+    function adicionarATabela() {
         let tr = document.createElement('tr');
-        let td = document.createElement('td');
+        let tdNome = document.createElement('td');
+        let tdProfissao = document.createElement('td');
+
+        tdNome.innerText = document.getElementById('nome').value;
+        tdProfissao.innerText = document.getElementById('profissao').value;
+
+        const tabela = document.getElementById('tabelaPessoas');
+       
+        tr.appendChild(tdNome);
+        tr.appendChild(tdProfissao);
+        tabela.appendChild(tr);
+
     }
 
     // botao.addEventListener('click', cadastrarPessoa); // outra forma de fazer a mesma coisa
