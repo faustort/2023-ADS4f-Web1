@@ -102,7 +102,11 @@ include __DIR__ . '/header.php';
 
     }
 
-    // botao.addEventListener('click', cadastrarPessoa); // outra forma de fazer a mesma coisa
+    /*
+     * exercício 1: crie um elemento Selector em HTML que selecione o Gênero da pessoa
+     * Neste caso teremos Masculino, feminino e outros.
+     * Link: https://getbootstrap.com/docs/5.0/forms/select/
+     */
 </script>
 
 
