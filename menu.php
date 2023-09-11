@@ -8,16 +8,16 @@
         </div>
         <!-- F2 -->
         <div class="col-7">
-            <nav> <!-- Começo do Menu -->
-                <ul class="menu"> <!-- Lista de links -->
-                    <li><a href="index.php" class="amarelo">Inicial</a></li>
-                    <li><a href="sobre.php">Sobre</a></li>
-                    <li><a href="portfolio.php">Portifólio</a></li>
-                    <li><a href="noticias.php">Notícias</a></li>
-                    <li><a href="servicos.php">Serviços</a></li>
-                    <li><a href="exercicio.php">Exercício</a></li>
-                    <li><a href="json.php">Json</a></li>
-                    <li><a href="contato.php">Contato</a></li>
+            <nav class="navbar navbar-expand-lg navbar-light  "> <!-- Começo do Menu -->
+                <ul class="navbar-nav mr-auto"> <!-- Lista de links -->
+                    <li class="nav-item"><a class="nav-link" href="index.php" class="amarelo">Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.php">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.php">Portifólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.php">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.php">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exercicio.php">Exercício</a></li>
+                    <li class="nav-item"><a class="nav-link" href="json.php">Json</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.php">Contato</a></li>
                 </ul>
             </nav>
         </div>
