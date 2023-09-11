@@ -19,6 +19,15 @@ include __DIR__ . '/header.php';
                         <input type="text" class="form-control" name="profissao" id="profissao">
                     </div>
                     <div>
+                        <label for="sexo" class="form-label"></label>
+                        <select name="sexo" id="sexo">
+                            <option value="selecione" disabled>Selecionar</option>
+                            <option value="Feminino">Sexo Feminino</option>
+                            <option value="Masculino">Sexo Masculino</option>
+                            <option value="Outros"> Outros</option>
+                        </select>
+                    </div>
+                    <div>
                         <button id="executar">Adicionar Pessoa</button>
                     </div>
                 </form>
@@ -26,6 +35,7 @@ include __DIR__ . '/header.php';
                     <tr>
                         <td>Nome</td>
                         <td>Profissão</td>
+                        <td>Sexo</td>
                     </tr>
                 </table>
             </div>
@@ -66,10 +76,15 @@ include __DIR__ . '/header.php';
         // Cria dois elementos virtuais td no DOM
         let tdNome = document.createElement('td');
         let tdProfissao = document.createElement('td');
+        let tdSexo = document.createElement('td');
 
         // Pega os valores dos inputs e coloca dentro dos tds
         tdNome.innerText = document.getElementById('nome').value;
         tdProfissao.innerText = document.getElementById('profissao').value;
+
+        let selecaoSexo = document.getElementById('sexo').value;
+        console.log(selecaoSexo);
+        tdSexo.innerText = selecaoSexo;
 
         // inicio o processo de criação do botão trash
         btTrash = document.createElement('i');
@@ -96,6 +111,7 @@ include __DIR__ . '/header.php';
         // insiro os tds dentro da tr
         tr.appendChild(tdNome);
         tr.appendChild(tdProfissao);
+        tr.appendChild(tdSexo);
 
         // por final insiro a tr dentro da tabela
         tabela.appendChild(tr);
@@ -103,10 +119,15 @@ include __DIR__ . '/header.php';
     }
 
     /*
-     * exercício 1: crie um elemento Selector em HTML que selecione o Gênero da pessoa
+     * exercício 1: crie um elemento Select em HTML que selecione o Gênero da pessoa
      * Neste caso teremos Masculino, feminino e outros.
+     * deve-se colocar este gênero na tabela também e no objeto pessoa
      * Link: https://getbootstrap.com/docs/5.0/forms/select/
      */
+
+     // resolvido acima
+
+    /* */
 </script>
 
 
