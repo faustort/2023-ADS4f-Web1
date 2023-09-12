@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Usamos o RewriteRule para criar
+# uma regra dentro do .htacess 
+# RewriteRule {REGRA} {DESTINO} [flags]
+RewriteRule ^(.*)$ index.php?path=$1 [QSA,L]
