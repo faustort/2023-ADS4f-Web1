@@ -4,3 +4,9 @@ RewriteEngine On
 # uma regra dentro do .htacess 
 # RewriteRule {REGRA} {DESTINO} [flags]
 RewriteRule ^(.*)$ index.php?path=$1 [QSA,L]
+# ^(.*)$ = Qualquer coisa que vier depois do dominio
+# index.php?path=$1 = O que vier depois do dominio sera passado para a variavel path
+# [QSA,L] = Flags, QSA = Query String Append, L = Last
+# QSA = Adiciona a query string original a query string nova
+# L = Last, para a execucao do .htaccess
+
