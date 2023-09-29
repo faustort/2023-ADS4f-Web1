@@ -3,15 +3,13 @@
 header('Content-Type: application/json');
 
 
-
 // verifica se o parâmetro path foi enviado
 // se sim, retorna um Json com o caminho para fins de depuração
-if (isset($_GET['path'])) {
+if (isset($_GET['tabela'])) {
     echo json_encode(
         [
-            'path' => $_GET['tabela'],
+            'tabela' => $_GET['tabela'],
             'id' => $_GET['id'],
-            'titulo' => 'Estamos usando o caminho acima',
         ]
     );
     exit; // daqui ele para
